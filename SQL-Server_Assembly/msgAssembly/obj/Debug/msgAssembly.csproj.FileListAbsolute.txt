@@ -1,0 +1,11 @@
+F:\Javed\Visual Studio 2015\Projects\msgAssembly\msgAssembly\bin\Debug\msgAssembly.dll
+F:\Javed\Visual Studio 2015\Projects\msgAssembly\msgAssembly\bin\Debug\msgAssembly.pdb
+F:\Javed\Visual Studio 2015\Projects\msgAssembly\msgAssembly\obj\Debug\msgAssembly.dll
+F:\Javed\Visual Studio 2015\Projects\msgAssembly\msgAssembly\obj\Debug\msgAssembly.pdb
+C:\Users\mateen\Desktop\New folder\msgAssembly\bin\Debug\MessageAssembly.dll
+C:\Users\mateen\Desktop\New folder\msgAssembly\bin\Debug\MessageAssembly.pdb
+C:\Users\mateen\Desktop\New folder\msgAssembly\bin\Debug\Newtonsoft.Json.dll
+C:\Users\mateen\Desktop\New folder\msgAssembly\bin\Debug\Slack.Webhooks.dll
+C:\Users\mateen\Desktop\New folder\msgAssembly\bin\Debug\Newtonsoft.Json.xml
+C:\Users\mateen\Desktop\New folder\msgAssembly\obj\Debug\MessageAssembly.dll
+C:\Users\mateen\Desktop\New folder\msgAssembly\obj\Debug\MessageAssembly.pdb
