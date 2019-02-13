@@ -20,25 +20,25 @@ pipeline {
     stage('hm_build') {
       steps {
         echo 'Here is a step Build named Hm_Build '
-        checkout([$class: 'GitSCM', branches: [[name: '*/develop']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'git@bitbucket.org:gaditek_dpi/automationscripts.git']]])
+        checkout([$class: 'GitSCM', branches: [[name: '*/develop']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: '']]])
         sh './projects/hm/hm_build.sh'
-        slackSend baseUrl: 'https://networking-zigroninc.slack.com/services/hooks/jenkins-ci/', channel: 'health_monitor', color: 'Green', message: 'Health Monitor Build Successfully', token: 'CiNUGrFdmnNqGSNFz80YJjL3'
+        slackSend baseUrl: '', channel: 'health_monitor', color: 'Green', message: 'Health Monitor Build Successfully', token: 'CiNUGrFdmnNqGSNFz80YJjL3'
       }
     }
     stage('hm_deply') {
       steps {
         echo 'Deploying project on staging server'
-        checkout([$class: 'GitSCM', branches: [[name: '*/develop']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'git@bitbucket.org:gaditek_dpi/automationscripts.git']]])
+        checkout([$class: 'GitSCM', branches: [[name: '*/develop']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: '']]])
         sh './projects/hm/hm_deploy.sh'
-        slackSend baseUrl: 'https://networking-zigroninc.slack.com/services/hooks/jenkins-ci/', channel: 'health_monitor', color: 'Green', message: 'HEalth Monitor Deployed Successfully', token: 'CiNUGrFdmnNqGSNFz80YJjL3'
+        slackSend baseUrl: 'URL', channel: 'health_monitor', color: 'Green', message: 'HEalth Monitor Deployed Successfully', token: ''
       }
     }
     stage('hm_prod') {
       steps {
         echo 'Installing project on production server'
-        checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'git@bitbucket.org:gaditek_dpi/automationscripts.git']]])
+        checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: '']]])
         sh './projects/hm/hm_prod.sh $TAG $HOSTS'
-        slackSend baseUrl: 'https://networking-zigroninc.slack.com/services/hooks/jenkins-ci/', channel: 'health_monitor', color: 'Red', message: 'Deploying Production server', token: 'CiNUGrFdmnNqGSNFz80YJjL3'
+        slackSend baseUrl: 'URL', channel: 'health_monitor', color: 'Red', message: 'Deploying Production server', token: ''
       }
     }
   }
