@@ -1,0 +1,17 @@
+- name: Playbook to setup haproxy
+  hosts: localhost
+  gather_facts: false
+  #become: true
+  become_user: root
+  tasks:
+    - name: Install prereqs
+      apt: 
+        name: haproxy
+        state: present
+        update_cache: yes
+    - copy:
+        src: /home/ali/Desktop/haProxy/haproxy.cfg
+        dest: /etc/haproxy/haproxy.cfg 
+        mode: 0600
+  roles:
+   - test-role-1    
