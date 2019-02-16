@@ -61,7 +61,7 @@ try:
 except dns.exception.DNSException as err:
     print("Query failed",err)
 #####################################################################################################################
-webhook_url = 'https://hooks.slack.com/services/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'
+webhook_url = 'https://hooks.slack.com/services/**********************************************'
 msg={'text': slack_msg }
 try:
    requests.post(webhook_url,data=json.dumps(msg))
