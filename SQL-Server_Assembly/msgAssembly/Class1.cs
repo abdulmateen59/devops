@@ -55,7 +55,7 @@ public partial class RealTimeLogs
             + (string)reader[6].ToString();
 
 
-            string webhookUrl = "https://hooks.slack.com/services/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";
+            string webhookUrl = "https://hooks.slack.com/services/*************************************";
             Message message = new Message(webhookUrl, postdata, "#realtime_logs", ":beetle:", "QA-LOG", true);
             message.Send();
             reader.Close();
