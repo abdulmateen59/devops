@@ -24,7 +24,7 @@ for i in data:
         print("Cannot Resolve hostname")
         slack_msg= slack_msg +  "`Server name = "  +  str(i['dns_name'])  +  " \t Server ip  = "+str(i['ipaddress'])  +  " Status = Failed` \n"
 
-webhook_url = 'https://hooks.slack.com/services/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'
+webhook_url = 'https://hooks.slack.com/services/***************************************************'
 msg={'text': slack_msg }
 try:
    requests.post(webhook_url,data=json.dumps(msg))
